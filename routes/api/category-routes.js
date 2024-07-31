@@ -31,12 +31,15 @@ router.get("/:id", async (req, res) => {
 
 router.post("/", async (req, res) => {
   try {
-    const categoryData = await Category.create({
-      category_id: req.body.category_id,
-    });
+    const { category_name } = req.body;
+    if (!category_name) {
+      return res.status(400).json({ message: 'category name required' })
+    }
+    const categoryData = await Category.create({ category_name });
     res.status(200).json(categoryData);
   } catch (err) {
-    res.status(400).json(err);
+    console.error(err);
+    res.status(500)._construct({ error: 'An error occured' })
   }
 });
 
