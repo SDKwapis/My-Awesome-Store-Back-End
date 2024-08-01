@@ -39,7 +39,7 @@ router.post("/", async (req, res) => {
     res.status(200).json(categoryData);
   } catch (err) {
     console.error(err);
-    res.status(500)._construct({ error: 'An error occured' })
+    res.status(500).json({ error: 'An error occured' })
   }
 });
 
