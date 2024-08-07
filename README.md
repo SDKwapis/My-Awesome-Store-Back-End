@@ -21,6 +21,10 @@ In order to run the application you need to access the terminal within the serve
 # Usage
 This is a backend specific application to manage inventory for an e-commerce store. Through GET, POST, PUT, and DELTE requests you can update, add too, delete, and view product inventory for the shop.
 
+# Visuals/Links
+<img src="./images/img1.png">
+https://github.com/SDKwapis/My-Awesome-Store-Back-End
+
 # Contributing
 This project was built using class materials and rewatching the class recordings. Certain syntax and definitions were looked up using the Xpert Learning Assistant.
 
